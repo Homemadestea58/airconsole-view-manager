@@ -7,20 +7,22 @@
 
 <h1>Controller</h1>
 
-<button id="set_custom_button_0">CTRL view start</button>
 <button id="set_custom_button_1">CTRL view ingame</button>
 <button id="set_custom_button_2">SCREEN ingame</button>
 
   <div id="start" class="view default-view">
-    START
+    Welcome to Airconsole!!
+    Press the Button to Start
+    <button id="set_custom_button_0">Start</button>
   </div>
 
   <div id="ingame" class="view">
-    INGAME
+    You are now ingame
+    <button id="endgame">Endgame</button>
   </div>
 
   <div id="endgame" class="view">
-    GAME END!
+    OOF!! GAME OVER!
   </div>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -52,6 +54,12 @@
   $("#set_custom_button_2").on('click', function () {
     vm.screenShow('ingame');
   });
+  
+  $("#endgame").on('click', function () {
+    vm.controllersShow('endgame');
+    vm.screenShow('endgame');
+  });
+                   
 
 </script>
 </body>
